@@ -8,7 +8,7 @@
                 <div class="col-lg-6 col-md-8 m-auto">
                     <div class="login-content">
                         <h4>Reset Your Password</h4>
-                        <form  action="{{route('password.reset')}}" class="sign-form widget-form " method="post">
+                        <form  action="{{route('customer.password.reset')}}" class="sign-form widget-form " method="post">
                             @csrf
                             <div class="form-group">
                                 <input type="hidden" class="form-control" name="token" value="{{ $token }}">
