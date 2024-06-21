@@ -11,7 +11,7 @@ use App\Models\Order;
 use App\Models\OrderProduct;
 use App\Models\Product;
 use App\Models\Size;
-use App\Models\Subcategory;
+use App\Models\SubCategory;
 use App\Models\Thumbnail;
 use App\Models\Thumnail;
 use App\Models\Wishlish;
@@ -41,7 +41,7 @@ class FrontendController extends Controller
 
         
         $categories = Category::all();
-        $subcategories = Subcategory::all();
+        $subcategories = SubCategory::all();
         $products = Product::orderBy('created_at', 'desc')->paginate(18);
         $recentsProducts = Product::orderBy('created_at', 'desc')->limit(4)->get();
 

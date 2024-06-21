@@ -22,6 +22,7 @@ use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CustomerPasswordResetController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\SslCommerzPaymentController;
@@ -43,6 +44,10 @@ Route::get('/sales/product',[FrontendController::class,'salesProduct'])->name('s
 Route::post('/customer/register',[CustromerRegisterController::class,'customerRegister'])->name('customer.register');
 Route::post('/customer/login',[CustomerLoginController::class,'customerLogin'])->name('customer.login');
 Route::get('/customer/logout',[CustomerLoginController::class,'Logout'])->name('customer.logout');
+
+//customer-social-login
+Route::get('/google/redirect',[GoogleController::class,'google_redirect'])->name('google.redirect');
+Route::get('/google/callback',[GoogleController::class,'google_callback'])->name('google.callback');
 
 //password-Reset
 Route::get('/forgot-password',[CustomerPasswordResetController::class,'index'])->name('forgot.password');

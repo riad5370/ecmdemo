@@ -75,6 +75,13 @@
                             </div>	
                         </div>
                     </div>
+
+                    <div class="text-center">
+                        <a href="{{ route('google.redirect') }}" class="btn btn-danger btn-block d-flex justify-content-center align-items-center" style="width: 100%; max-width: 100%; text-align: center;">
+                            <span>Login with google</span> 
+                            <img style="width: 30px; margin-left: 10px;" src="{{ asset('frontend/img/google-plus.png') }}" alt="">
+                        </a>
+                    </div>
                 </form>
             </div>
             

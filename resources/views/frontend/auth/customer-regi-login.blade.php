@@ -35,6 +35,12 @@
                 @if(session('error'))
                 <div class="alert alert-warning">{{session('error')}}</div>
                 @endif
+                @if(session('success'))
+                <div class="alert alert-success">{{session('success')}}</div>
+                @endif
+                @if(session('msg'))
+                <div class="alert alert-warning">{{session('msg')}}</div>
+                @endif
                 <form action="{{route('customer.login')}}" class="border p-3 rounded" method="POST">
                     @csrf				
                     <div class="form-group">
@@ -62,6 +68,13 @@
                     <div class="form-group d-flex justify-content-center">
                         <span>New member? <a href="{{route('customer.newregister')}}" class="text-decoration-none">Register here.</a></span>
                     </div>
+                    <div class="my-4 text-center">
+                        <a href="{{ route('google.redirect') }}" class="btn btn-danger btn-block d-flex justify-content-center align-items-center" style="width: 100%; max-width: 100%; text-align: center;">
+                            <span>Login with google</span> 
+                            <img style="width: 30px; margin-left: 10px;" src="{{ asset('frontend/img/google-plus.png') }}" alt="">
+                        </a>
+                    </div>
+                    
                 </form>
             </div>
         </div>
