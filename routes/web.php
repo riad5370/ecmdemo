@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\VariationController;
 use App\Http\Controllers\CustromerRegisterController;
 use App\Http\Controllers\CustomerLoginController;
 use App\Http\Controllers\Admin\CouponController;
@@ -18,27 +17,29 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\CartController;
-use App\Http\Controllers\WishlistController;
+use App\Http\Controllers\CategorySubcategoryProductController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CustomerPasswordResetController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\OtherFrontendController;
+use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\SslCommerzPaymentController;
 
 
 Route::get('/',[FrontendController::class,'index'])->name('index');
-Route::get('/product-details/{slug}',[FrontendController::class,'details'])->name('details');
-Route::post('/getsize',[FrontendController::class,'getsize']);
-Route::get('/customer/signup',[FrontendController::class,'signup'])->name('customer.signup');
-Route::get('/customer/new-register',[FrontendController::class,'newRegister'])->name('customer.newregister');
-Route::get('/cart',[FrontendController::class,'cart'])->name('cart.view');
-Route::get('/wishlist',[FrontendController::class,'wishlist'])->name('wishlist.view');
-Route::get('/my/order',[FrontendController::class,'myOrder'])->name('my.order');
-Route::get('/category/product/{category_id}',[FrontendController::class,'categoryProduct'])->name('category.product');
-Route::get('/subcategory/product/{subcategory_id}',[FrontendController::class,'subcategoryProduct'])->name('subcategory.product');
-Route::get('/sales/product',[FrontendController::class,'salesProduct'])->name('sales.product');
+Route::get('/product-details/{slug}',[ProductDetailController::class,'details'])->name('details');
+Route::post('/getsize',[OtherFrontendController::class,'getsize']);
+Route::get('/customer/signup',[OtherFrontendController::class,'signup'])->name('customer.signup');
+Route::get('/customer/new-register',[OtherFrontendController::class,'newRegister'])->name('customer.newregister');
+// Route::get('/wishlist',[OtherFrontendController::class,'wishlist'])->name('wishlist.view');
+Route::get('/my/order',[OtherFrontendController::class,'myOrder'])->name('my.order');
+Route::get('/sales/product',[OtherFrontendController::class,'salesProduct'])->name('sales.product');
+Route::get('/cart',[CategorySubcategoryProductController::class,'cart'])->name('cart.view');
+Route::get('/category/product/{category_id}',[CategorySubcategoryProductController::class,'categoryProduct'])->name('category.product');
+Route::get('/subcategory/product/{subcategory_id}',[CategorySubcategoryProductController::class,'subcategoryProduct'])->name('subcategory.product');
 
 //customer-Register-Login
 Route::post('/customer/register',[CustromerRegisterController::class,'customerRegister'])->name('customer.register');

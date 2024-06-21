@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Admin;
 
 use App\Helpers\Photo;
@@ -66,7 +65,7 @@ class ProductController extends Controller
             'discount' => 'nullable|numeric',
             'short_desp' => 'required',
             'long_desp' => 'nullable',
-            'preview' => 'required|image|mimes:jpg,png,wepb,jpeg|max:1024',
+            'preview' => 'required|image|mimes:jpg,png,wepb,jpeg|max:600',
         ];
         //validate data
         $validatedData = $request->validate($rules);
@@ -138,7 +137,7 @@ class ProductController extends Controller
             'discount' => 'nullable|numeric',
             'short_desp' => 'required',
             'long_desp' => 'nullable',
-            'preview' => 'image|mimes:jpg,png,wepb,jpeg|max:1024',
+            'preview' => 'image|mimes:jpg,png,wepb,jpeg|max:600',
         ];
         //validate data
         $validatedData = $request->validate($rules);

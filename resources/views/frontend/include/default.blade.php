@@ -25,11 +25,11 @@
                 
             </div>
             
-            <div class="cart_action px-3 py-3">
+            {{-- <div class="cart_action px-3 py-3">
                 <div class="form-group">
                     <a href="{{ route('wishlist.view') }}" class="btn d-block full-width btn-dark-light">View Wishlist</a>
                 </div>
-            </div>
+            </div> --}}
             
         </div>
     </div>
