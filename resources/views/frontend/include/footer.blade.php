@@ -2,7 +2,6 @@
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_widget">
                         <img src="{{asset('frontend')}}/img/logo-light1.png" class="img-footer small mb-2" alt="" />
@@ -24,7 +23,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
                     <div class="footer_widget">
                         <h4 class="widget_title">Supports</h4>

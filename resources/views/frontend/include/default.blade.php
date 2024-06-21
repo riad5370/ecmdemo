@@ -6,7 +6,6 @@
             <button onclick="closeWishlist()" class="close_slide"><i class="ti-close"></i></button>
         </div>
         <div class="right-ch-sideBar">
-            
             <div class="cart_select_items py-2">
                 <!-- Single Item -->
                 @foreach (App\Models\Wishlish::where('customer_id',Auth::guard('customerlogin')->id())->get() as $wish)
