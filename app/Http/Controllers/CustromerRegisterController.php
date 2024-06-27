@@ -27,7 +27,15 @@ class CustromerRegisterController extends Controller
         $validateData['password'] = bcrypt($validateData['password']);
 
         //data-store
-        $customer = CustolerLogin::create($validateData);
+
+        $exists = CustolerLogin::where('email', $request->email)->first();
+        if ($exists) {
+            return back()->withError('This email is already registered.');
+        } else {
+            $customer = CustolerLogin::create($validateData);
+        }
+        // $customer = CustolerLogin::create($validateData);
+        
 
         if(Auth::guard('customerlogin')->attempt(['email'=>$request->email,'password'=>$request->password])){
             return redirect()->route('index')->withSuccess('You have successfully login'); 

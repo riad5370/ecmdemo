@@ -28,6 +28,9 @@
                 @if(session('success'))
                 <div class="alert alert-success">{{session('success')}}</div>
                 @endif
+                @if(session('error'))
+                <div class="alert alert-warning">{{session('error')}}</div>
+                @endif
                 <form action="{{route('customer.register')}}" class="border p-3 rounded" method="POST">
                     @csrf
                     <div class="row">
