@@ -31,6 +31,15 @@
 
         <div class="row justify-content-between">
             <div class="col-12 col-lg-7 col-md-12">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('checkout.store') }}" method="POST">
                     @csrf
                     <h5 class="mb-4 ft-medium">Billing Details</h5>
@@ -52,14 +61,14 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
                                 <label class="text-dark">Mobile Number *</label>
-                                <input type="number" name="mobile" class="form-control" placeholder="Mobile Number" />
+                                <input type="number" value="{{old('mobile')}}" name="mobile" class="form-control" placeholder="Mobile Number" />
                             </div>
                         </div>
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="form-group">
                                 <label class="text-dark">Address *</label>
-                                <textarea name="address" class="form-control" placeholder="Address"></textarea>
+                                <textarea name="address" class="form-control" placeholder="Address">{{old('address')}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -120,7 +129,7 @@
                         <h6>Select Payment Method</h6>
                         <ul class="no-ul-list">
                             <li>
-                                <input id="c3" value="1" class="radio-custom" name="payment_method" type="radio">
+                                <input id="c3" value="1" class="radio-custom" name="payment_method" checked type="radio">
                                 <label for="c3" class="radio-custom-label">Cash on Delivery</label>
                             </li>
                             {{-- <li>
@@ -167,7 +176,6 @@
 @include('frontend.page.customer-feature')
 <!-- ======================= Customer Features ======================== -->
 @endsection
-
 @push('js')
 <script>
     $('.delivery').click(function() {

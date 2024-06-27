@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Mail\InvoiceMail;
 use App\Models\BillingDetails;
 use App\Models\Cart;
-use App\Models\City;
-use App\Models\Country;
 use App\Models\Inventory;
 use App\Models\Order;
 use App\Models\OrderProduct;
@@ -27,17 +25,16 @@ class CheckoutController extends Controller
             'carts' => $carts,
         ]);
     }
-    // public function getCity(Request $request){
-    //     $cities = City::where('country_id',$request->country)->get();
-    //      $str = '<option value="">-- Select City --</option>';
- 
-    //     foreach($cities as $city){
-    //          $str .= '<option value="'.$city->id.'">'.$city->name.'</option>';
-    //     }
-    //     echo $str;
-    // }
-
+    
     public function store(Request $request){
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'mobile' => 'required|numeric',
+            'address' => 'required|string',
+            'charge' => 'required',
+        ]);
+        
         if($request->payment_method == 1){
             $order_id = '#'.Str::upper(Str::random(3)).'-'.rand(99999999,1000000000);
 

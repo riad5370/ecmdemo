@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="form-group col-md-12">
                             <label>Full Name *</label>
-                            <input type="text" name="name" class="form-control" placeholder="Full Name">
+                            <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="Full Name">
                             @error('name')
                             <strong class="text-danger">{{$message}}</strong>
                             @enderror
@@ -45,7 +45,7 @@
                     
                     <div class="form-group">
                         <label>Email *</label>
-                        <input type="email" name="email" class="form-control" placeholder="Email*">
+                        <input type="email" name="email" value="{{old('email')}}" class="form-control" placeholder="Email*">
                         @error('email')
                         <strong class="text-danger">{{$message}}</strong>
                         @enderror

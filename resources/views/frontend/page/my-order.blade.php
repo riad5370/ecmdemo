@@ -20,6 +20,7 @@
 			<!-- ======================= Top Breadcrubms ======================== -->
 			
 			<!-- ======================= Dashboard Detail ======================== -->
+     
 			<section class="middle">
 				<div class="container">
 					<div class="row align-items-start justify-content-between">
@@ -56,6 +57,26 @@
 							</div>
 						</div>
 						
+
+                        @if ($myorders->isEmpty())
+                        <div class="col-12 col-md-12 col-lg-8 col-xl-8 text-center">
+                            <section class="middle">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
+                        
+                                            <!-- Icon -->
+                                            <div class="p-4 d-inline-flex align-items-center justify-content-center circle bg-light-success text-success mx-auto mb-4"><img width="100" src="https://static.thenounproject.com/png/237706-200.png" alt=""></div>
+                                            <!-- Heading -->
+                                            <h2 class="mb-5 ft-bold text-danger">No Products Order!</h2>
+                                            <!-- Button -->
+                                            <a class="btn btn-dark" href="{{ url('/') }}">Go To Shop</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        @else
 						<div class="col-12 col-md-12 col-lg-8 col-xl-8 text-center">
 							<!-- Single Order List -->
                             @foreach ($myorders as $order)
@@ -154,7 +175,7 @@
 							<!-- End Order List -->
                             @endforeach
 						</div>
-						
+						@endif
 					</div>
 				</div>
 			</section>

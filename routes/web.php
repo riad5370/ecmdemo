@@ -26,7 +26,6 @@ use App\Http\Controllers\OtherFrontendController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\StripePaymentController;
-use App\Http\Controllers\SslCommerzPaymentController;
 
 
 Route::get('/',[FrontendController::class,'index'])->name('index');
@@ -79,27 +78,11 @@ Route::post('cart/update',[CartController::class,'cartUpdate'])->name('cart.upda
 
 //product-checkout
 Route::get('/checkout',[CheckoutController::class,'checkout'])->name('checkout');
-// Route::post('/getCity',[CheckoutController::class,'getCity']);
 Route::post('/checkout/store',[CheckoutController::class,'store'])->name('checkout.store');
 Route::get('/order/success/{abc}',[CheckoutController::class,'orderSuccess'])->name('order.success');
 
 //searching..................
 Route::get('/search',[SearchController::class,'search'])->name('search');
-
-// SSLCOMMERZ Start
-Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
-
-Route::get('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay');
-Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
-
-Route::post('/success', [SslCommerzPaymentController::class, 'success']);
-Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
-Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
-//SSLCOMMERZ END
-
 //stripe-payment-method
 Route::controller(StripePaymentController::class)->group(function(){
     Route::get('stripe', 'stripe');

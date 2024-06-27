@@ -18,4 +18,7 @@ class Product extends Model
     function brand(){
         return $this->belongsTo(Brand::class,'brand_id');
     }
+    function rel_to_inventories(){
+        return $this->hasMany(Inventory::class,'product_id');
+    }
 }
