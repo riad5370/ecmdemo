@@ -34,7 +34,7 @@ class FrontendController extends Controller
         
         $categories = Category::all();
         $subcategories = SubCategory::all();
-        $products = Product::orderBy('created_at', 'desc')->paginate(18);
+        $products = Product::orderBy('created_at', 'desc')->paginate(24);
         $recentsProducts = Product::orderBy('created_at', 'desc')->limit(4)->get();
 
         $best_selling_product = OrderProduct::groupBy('product_id')

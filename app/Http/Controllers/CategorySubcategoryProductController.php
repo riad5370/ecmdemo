@@ -16,7 +16,7 @@ class CategorySubcategoryProductController extends Controller
 {
     public function categoryProduct($category_id){
         $category_name = Category::find($category_id);
-        $category_products = Product::where('category_id', $category_id)->paginate('16');
+        $category_products = Product::where('category_id', $category_id)->paginate('18');
         $subcategoryProducts = SubCategory::where('category_id', $category_id)->get();
         return view('frontend.page.category-product',[
             'category_products'=>$category_products,
@@ -27,7 +27,7 @@ class CategorySubcategoryProductController extends Controller
 
     public function subcategoryProduct($subcategoryId){
         $sucategory_name = Subcategory::find($subcategoryId);
-       $subcategoryProducts = Product::where('subcategory_id',$subcategoryId)->paginate('16');
+       $subcategoryProducts = Product::where('subcategory_id',$subcategoryId)->paginate('18');
        return view('frontend.page.subcategoryProduct',[
         'subcategoryProducts'=>$subcategoryProducts,
         'sucategory_name' => $sucategory_name

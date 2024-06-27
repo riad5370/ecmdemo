@@ -23,7 +23,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_widget">
                         <h4 class="widget_title">Supports</h4>
                         <ul class="footer-menu">
@@ -36,7 +36,7 @@
                     </div>
                 </div>
                         
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_widget">
                         <h4 class="widget_title">Shop</h4>
                         <ul class="footer-menu">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
         
-                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
                     <div class="footer_widget">
                         <h4 class="widget_title">Company</h4>
                         <ul class="footer-menu">
@@ -59,27 +59,7 @@
                             <li><a href="#">Login</a></li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
-                    <div class="footer_widget">
-                        <h4 class="widget_title">Subscribe</h4>
-                        <p>Receive updates, hot deals, discounts sent straignt in your inbox daily</p>
-                        <div class="foot-news-last">
-                            <div class="input-group">
-                              <input type="text" class="form-control" placeholder="Email Address">
-                                <div class="input-group-append">
-                                    <button type="button" class="input-group-text b-0 text-light"><i class="lni lni-arrow-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="address mt-3">
-                            <h5 class="fs-sm text-light">Secure Payments</h5>
-                            <div class="scr_payment"><img src="{{asset('frontend')}}/img/card.png" class="img-fluid" alt="" /></div>
-                        </div>
-                    </div>
-                </div>
-                    
+                </div>    
             </div>
         </div>
     </div>
@@ -88,7 +68,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12 col-md-12 text-center">
-                    <p class="mb-0">© 2021 Kumo. Designd By <a href="https://themezhub.com/">ThemezHub</a>.</p>
+                    <p class="mb-0">© 2024 SRCodeX. Designd By <a href="https://www.srcodex.com/">SRCodeX</a>.</p>
                 </div>
             </div>
         </div>

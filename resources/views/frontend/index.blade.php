@@ -132,7 +132,7 @@
                                     </span>
                                 </div>
                                 <h5 class="fs-md mb-0 lh-1 mb-1">
-                                    <a href="shop-single-v1.html">{{$product->name}}</a>
+                                    <a href="{{route('details',$product->slug)}}">{{ substr($product->name, 0, 43) }}</a>
                                 </h5>
                                 <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                     @php
@@ -216,7 +216,7 @@
                                     </span>
                                 </div>
                                 <h5 class="fs-md mb-0 lh-1 mb-1">
-                                    <a href="shop-single-v1.html">{{$best_product->product->name}}</a>
+                                    <a href="{{route('details',$product->slug)}}">{{ substr($best_product->product->name, 0, 43)}}</a>
                                 </h5>
                                 <div class="star-rating align-items-center d-flex justify-content-left mb-2 p-0">
                                     @php
