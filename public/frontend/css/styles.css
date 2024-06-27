@@ -5143,6 +5143,47 @@ select.form-control:focus {
     /* Ensure it stays on top */
 }
 
+.cats_side_wrap:hover {
+    border: 1px solid #ff6f61 !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(-5px) !important;
+}
+
+@media (min-width: 1200px) {
+    .col-xl-1-5 {
+        flex: 0 0 12.5%;
+        max-width: 12.5%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .col-lg-1-5 {
+        flex: 0 0 12.5%;
+        max-width: 12.5%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .col-md-2 {
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .col-sm-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .col-3 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
 
 /*--------------- end my extra css ----------------*/
 

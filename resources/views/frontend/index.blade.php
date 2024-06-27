@@ -1,48 +1,4 @@
 @extends('frontend.include.master')
-@push('css')
-<style>
-    .cats_side_wrap:hover {
-        border: 1px solid #ff6f61 !important; 
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important;
-        transform: translateY(-5px) !important;
-    }
-
-    @media (min-width: 1200px) {
-        .col-xl-1-5 {
-            flex: 0 0 12.5%;
-            max-width: 12.5%;
-        }
-    }
-
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-        .col-lg-1-5 {
-            flex: 0 0 12.5%;
-            max-width: 12.5%;
-        }
-    }
-
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        .col-md-2 {
-            flex: 0 0 16.66667%;
-            max-width: 16.66667%;
-        }
-    }
-
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        .col-sm-3 {
-            flex: 0 0 25%;
-            max-width: 25%;
-        }
-    }
-
-    @media (max-width: 575.98px) {
-        .col-3 {
-            flex: 0 0 33.33333%;
-            max-width: 33.33333%;
-        }
-    }
-</style>
-@endpush
 @section('body')
 <!-- ======================= Category & Slider ======================== -->
 <section class="p-0">
@@ -211,13 +167,14 @@
                 </div>
             </div>  
             @endforeach
-            {{$products->links()}} 
+            {{$products->links()}}
         </div>  
     </div>
 </section>
 <!-- ======================= Product List ======================== -->
 
 <!-- =======================best selling Product List ======================== -->
+@if ($best_selling_product && $best_selling_product->count() > 0)
 <section class="middle" style="margin-top: 0px; padding-top: 0px;">
     <div class="container">
         <div class="row justify-content-center">
@@ -295,10 +252,10 @@
             </div>  
             @endif
             @endforeach
-            {{$products->links()}} 
         </div>  
     </div>
 </section>
+@endif
 <!-- ======================= best selling Product List ======================== -->
 
 

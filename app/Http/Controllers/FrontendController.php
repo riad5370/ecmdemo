@@ -40,7 +40,7 @@ class FrontendController extends Controller
         $best_selling_product = OrderProduct::groupBy('product_id')
         ->selectRaw('sum(quantity) as sum, product_id')
         ->orderBy('quantity','Desc')
-        ->havingRaw('sum >= 1')
+        ->havingRaw('sum >= 1')->limit(12)
         ->get();
         return view('frontend.index',[
             'products'=>$products,

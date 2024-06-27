@@ -57,9 +57,9 @@ Route::get('/password-reset-form/{token}',[CustomerPasswordResetController::clas
 Route::Post('/customer-password-reset',[CustomerPasswordResetController::class,'passwordReset'])->name('customer.password.reset');
 
 //Email-Verify
-Route::get('/verify/mail/{token}', [CustromerRegisterController::class, 'verifyMail'])->name('verify.mail');
-Route::get('/mail/verify/request',[CustromerRegisterController::class,'mailVerifyReq'])->name('verify.mail.req');
-Route::post('/mail/verify/again',[CustromerRegisterController::class,'mailVerifyAgain'])->name('mail.verify.again');
+// Route::get('/verify/mail/{token}', [CustromerRegisterController::class, 'verifyMail'])->name('verify.mail');
+// Route::get('/mail/verify/request',[CustromerRegisterController::class,'mailVerifyReq'])->name('verify.mail.req');
+// Route::post('/mail/verify/again',[CustromerRegisterController::class,'mailVerifyAgain'])->name('mail.verify.again');
 
 //customer-profile
 Route::get('/customer/profile',[CustomerController::class,'profile'])->name('customer.profile');
