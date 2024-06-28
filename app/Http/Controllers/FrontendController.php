@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Category;
 use App\Models\OrderProduct;
 use App\Models\Product;
+use App\Models\Slider;
 use App\Models\SubCategory;
 
 use Illuminate\Http\Request;
@@ -33,6 +34,7 @@ class FrontendController extends Controller
 
         
         $categories = Category::all();
+        $sliders = Slider::all();
         $subcategories = SubCategory::all();
         $products = Product::orderBy('created_at', 'desc')->paginate(24);
         $recentsProducts = Product::orderBy('created_at', 'desc')->limit(4)->get();
@@ -46,6 +48,7 @@ class FrontendController extends Controller
             'products'=>$products,
             'best_selling_product'=>$best_selling_product,
             'categories' => $categories,
+            'sliders' => $sliders,
             'resent_viewed_product'=>$resent_viewed_products,
             'subcategories'=>$subcategories,
             'recentsProducts'=>$recentsProducts,

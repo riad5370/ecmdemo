@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\OtherOrderController;
 use App\Http\Controllers\Admin\ProductVariationController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SliderControler;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\CartController;
@@ -101,6 +102,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])
     Route::resource('categories',CategoryController::class);
     Route::resource('subcategories',SubcategoryController::class);
     Route::resource('brands',BrandController::class);
+    Route::resource('sliders',SliderControler::class);
     Route::post('/getsubcategory',[ProductController::class,'getsubcategory']);
     Route::get('/products/inventory/{id}',[InventoryController::class,'inventory'])->name('products.inventory');
     Route::post('/products/store',[InventoryController::class,'inventoryStore'])->name('inventory.store');

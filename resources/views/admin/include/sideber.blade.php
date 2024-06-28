@@ -136,6 +136,16 @@
             </ul>
         </li>
 
+        {{-- sliders section --}}
+        <li class="@if(in_array(Request::segment(1), ['sliders'])) active open @endif">
+            <a href="{{route('sliders.index')}}">
+                <i class="menu-icon fa fa-sliders"></i>
+                <span class="menu-text">
+                    Slider
+                </span>
+            </a>
+        </li>
+
         {{-- customer section --}}
         <li class="@if(in_array(Request::segment(1), ['users'])) active open @endif">
             <a href="{{route('users.index')}}">

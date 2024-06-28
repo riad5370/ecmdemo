@@ -188,7 +188,7 @@ td1{
                         </td>
                         <div id="qwert">
                             <div>Invoice ID: {{ $order_info->order_id }}</div>
-                            <div>Date: {{ $billing_info->first()->created_at->format('d-m-y') }}</div>
+                            <div>Date: {{ $billing_info && $billing_info->first() ? $billing_info->first()->created_at->format('d-m-y') : 'N/A' }}</div>
                         </div>
                     </tr> 
                 </table>
