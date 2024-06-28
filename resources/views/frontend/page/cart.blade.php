@@ -1,7 +1,6 @@
 @extends('frontend.include.master')
-
 @section('body')
-<!-- ======================= Top Breadcrubms ======================== -->
+<!--Top Breadcrubms-->
 <div class="gray py-3">
     <div class="container">
         <div class="row">

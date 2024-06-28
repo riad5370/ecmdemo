@@ -1,13 +1,10 @@
 @extends('frontend.include.master')
-
 @section('body')
-
 @if(session('success'))
     <section class="middle">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center">
-
                     <!-- Icon -->
                     <div class="p-4 d-inline-flex align-items-center justify-content-center circle bg-light-success text-success mx-auto mb-4"><i class="lni lni-heart-filled fs-lg"></i></div>
                     <!-- Heading -->
@@ -22,5 +19,4 @@
         </div>
     </section>
 @endif
-
 @endsection

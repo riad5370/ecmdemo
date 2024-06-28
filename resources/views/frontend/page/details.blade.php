@@ -15,7 +15,6 @@
         </div>
     </div>
 </div>
-<!-- ======================= Top Breadcrubms ======================== -->
 
 <!-- ======================= Product Detail ======================== -->
 <section class="middle">
@@ -167,17 +166,6 @@
                                 </button>
                             </div>
                         </form>
-                           
-                            {{-- <form action="{{route('add.wishlist')}}" method="POST">
-                                @csrf
-                                <div class="col-12 col-lg-auto">
-                                    <!-- Wishlist -->
-                                    <input type="hidden" name="product_id" value="{{ $product_info->id }}"> --}}
-                                    {{-- <button type="submit" class="btn custom-height btn-default btn-block mb-2 text-dark">
-                                        <i class="lni lni-heart mr-2"></i>Wishlist
-                                    </button> --}}
-                                {{-- </div>
-                            </form> --}}
                       </div>
                       @if (session('error'))
                         <div class="alert alert-warning">{{session('error')}}</div>

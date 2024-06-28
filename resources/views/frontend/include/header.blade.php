@@ -2,11 +2,9 @@
 <div class="py-2 br-bottom hide-above-1023">
     <div class="container">
         <div class="row">
-            
             <div class="col-xl-7 col-lg-6 col-md-6 col-sm-12 hide-ipad">
                 <div class="top_second"><p class="medium text-muted m-0 p-0"><i class="lni lni-phone fs-sm"></i></i> Hotline <a href="#" class="medium text-dark text-underline">0(800) 123-456</a></p></div>
             </div>
-            
             <!-- Right Menu -->
             <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
                 @auth('customerlogin')

@@ -1,28 +1,7 @@
 @extends('frontend.include.master')
 @section('body')
-
-<!-- End Navigation -->
 <div class="clearfix"></div>
-<!-- ============================================================== -->
-<!-- Top header  -->
-<!-- ============================================================== -->
-
-<!-- ======================= Shop Style 1 ======================== -->
-<section class="bg-cover" style="background:url({{asset('Frontend/img/banner-2.png') }}) no-repeat;">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <div class="text-left py-5 mt-3 mb-3">
-                    <h1 class="ft-medium mb-3">Shop</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ======================= Shop Style 1 ======================== -->
-
-
-<!-- ======================= Filter Wrap Style 1 ======================== -->
+<!-- Filter Wrap Style 1 -->
 <section class="py-3 br-bottom br-top">
     <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -37,10 +16,9 @@
         </div>
     </div>
 </section>
-<!-- ============================= Filter Wrap ============================== -->
+<!-- Filter Wrap -->
 
-
-<!-- ======================= All Product List ======================== -->
+<!-- All Product List -->
 <section class="middle">
     <div class="container">
         <div class="row">
@@ -267,7 +245,6 @@
         </div>
     </div>
 </section>
-<!-- ======================= Customer Features ======================== -->
+<!-- Customer Features-->
 @include('frontend.page.customer-feature')
-<!-- ======================= Customer Features ======================== -->
 @endsection

@@ -97,7 +97,6 @@
         </div>
     </section>
     @endif
-<!-- ======================= Customer Features ======================== -->
+<!-- Customer Features-->
 @include('frontend.page.customer-feature')
-<!-- ======================= Customer Features ======================== -->
 @endsection

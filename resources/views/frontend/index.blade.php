@@ -1,6 +1,6 @@
 @extends('frontend.include.master')
 @section('body')
-<!-- ======================= Category & Slider ======================== -->
+<!-- Category & Slider -->
 <section class="p-0">
     <div class="container">
         <div class="row">
@@ -42,9 +42,9 @@
         </div>
     </div>
 </section>
-<!-- ======================= Category & Slider ======================== -->
+<!-- Category & Slider -->
 
-<!-- ======================= All Category ======================== -->
+<!-- All Category -->
 <section class="middle" style="background-color: #f0f4f8; padding: 20px;">
     <div class="container">
         <div class="row justify-content-center">
@@ -78,9 +78,9 @@
         </div>
     </div>
 </section>
-<!-- ======================= All Category ======================== -->
+<!-- All Category -->
 
-<!-- ======================= Product List ======================== -->
+<!-- Product List -->
 <section class="middle" style="margin-bottom: 0px; padding-bottom: 0px;">
     <div class="container">
         <div class="row justify-content-center">
@@ -156,9 +156,9 @@
         </div>
     </div>
 </section>
-<!-- ======================= Product List ======================== -->
+<!-- Product List -->
 
-<!-- =======================best selling Product List ======================== -->
+<!-- best selling Product List -->
 @if ($best_selling_product && $best_selling_product->count() > 0)
 <section class="middle" style="margin-top: 0px; padding-top: 0px;">
     <div class="container">
@@ -232,10 +232,9 @@
     </div>
 </section>
 @endif
+<!-- best selling Product List-->
 
-<!-- ======================= best selling Product List ======================== -->
-
-<!-- ======================= Brand Start ============================ -->
+<!--Brand Start-->
 <section class="py-3 br-top">
     <div class="container-fluid">
         <div class="row justify-content-center">
@@ -258,8 +257,6 @@
         </div>
     </div>
 </section>
-
-<!-- ======================= Customer Features ======================== -->
+<!--Customer Features-->
 @include('frontend.page.customer-feature')
-<!-- ======================= Customer Features ======================== -->
 @endsection

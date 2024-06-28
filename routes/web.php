@@ -34,7 +34,6 @@ Route::get('/product-details/{slug}',[ProductDetailController::class,'details'])
 Route::post('/getsize',[OtherFrontendController::class,'getsize']);
 Route::get('/customer/signup',[OtherFrontendController::class,'signup'])->name('customer.signup');
 Route::get('/customer/new-register',[OtherFrontendController::class,'newRegister'])->name('customer.newregister');
-// Route::get('/wishlist',[OtherFrontendController::class,'wishlist'])->name('wishlist.view');
 Route::get('/my/order',[OtherFrontendController::class,'myOrder'])->name('my.order');
 Route::get('/sales/product',[OtherFrontendController::class,'salesProduct'])->name('sales.product');
 Route::get('/cart',[CategorySubcategoryProductController::class,'cart'])->name('cart.view');
@@ -75,7 +74,6 @@ Route::post('/review/store',[CustomerController::class,'reviewStore'])->name('re
 Route::post('/add/cart',[CartController::class,'cartStore'])->name('add.cart');
 Route::get('cart/remove/{id}',[CartController::class,'remove'])->name('cart.remove');
 Route::post('cart/update',[CartController::class,'cartUpdate'])->name('cart.update');
-
 
 //product-checkout
 Route::get('/checkout',[CheckoutController::class,'checkout'])->name('checkout');

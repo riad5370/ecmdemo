@@ -43,12 +43,4 @@ class OtherFrontendController extends Controller
         $myorders = Order::where('customer_id',Auth::guard('customerlogin')->id())->get();
         return view('frontend.page.my-order',compact('myorders'));
     }
-
-    ///wishlist
-    // public function wishlist(){
-    //     $wishlists = Wishlish::where('customer_id',Auth::guard('customerlogin')->id())->get();
-    //     return view('frontend.page.wishlist',[
-    //         'wishlists'=>$wishlists
-    //     ]);
-    // }
 }

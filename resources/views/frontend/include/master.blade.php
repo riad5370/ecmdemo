@@ -33,11 +33,11 @@
 		@include('frontend.include.header')	
 		@yield('body')
 				
-		<!-- ============================ Footer Start ================================== -->
+		<!--Footer Start-->
 		@include('frontend.include.footer')
-		<!-- ============================ Footer End ================================== -->
+		<!--Footer End-->
 				
-		<!-- ===== whishlist and cart page ===== -->
+		<!--whishlist and cart page-->
 		@include('frontend.include.default')
 	</div>
 	<!-- All Jquery -->
