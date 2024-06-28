@@ -2,7 +2,7 @@
 @section('body')
 <div class="clearfix"></div>
 <!-- Filter Wrap Style 1 -->
-{{-- <section class="py-3 br-bottom br-top">
+<section class="py-3 br-bottom br-top">
     <div class="container">
         <div class="row align-items-center justify-content-between">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -15,7 +15,7 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 <!-- Filter Wrap -->
 
 <!-- All Product List -->
