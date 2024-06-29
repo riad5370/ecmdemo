@@ -38,74 +38,37 @@
         document.getElementById("Search").style.display = "none";
     }
 </script>
-
    <!-- ======== searching product ======== -->	
-    <script>
-        $('#search_btn').click(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-        $('#price_btn').click(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-        $('.category_id').click(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-        $('.color_idd').click(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-        $('.size_idd').click(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-        $('#short').change(function(){
-            var search_input = $('#search_input').val();
-            var category_id = $('input[class="category_id"]:checked').attr('value');
-            var color_id = $('input[class="color_idd"]:checked').attr('value');
-            var size_id = $('input[class="size_idd"]:checked').attr('value');
-            var min = $('#min').val();
-            var max = $('#max').val();
-            var short = $('#short').val();
-            var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
-            window.location.href = link;
-        });
-    </script>
+   <script>
+    function performSearch() {
+        var search_input = $('#search_input').val();
+        var category_id = $('input[class="category_id"]:checked').attr('value');
+        var color_id = $('input[class="color_idd"]:checked').attr('value');
+        var size_id = $('input[class="size_idd"]:checked').attr('value');
+        var min = $('#min').val();
+        var max = $('#max').val();
+        var short = $('#short').val();
+        var link = "{{ route('search') }}"+"?q="+search_input+"&category_id="+category_id+"&color_id="+color_id+"&size_id="+size_id+"&min="+min+"&max="+max+"&short="+short;
+        window.location.href = link;
+    }
+
+    $('#search_btn').click(function(){
+        performSearch();
+    });
+
+    $('#search_input').keypress(function(event) {
+        if (event.which === 13) {
+            performSearch();
+        }
+    });
+
+    $('#price_btn, .category_id, .color_idd, .size_idd').click(function(){
+        performSearch();
+    });
+
+    $('#short').change(function(event){
+        event.preventDefault();
+        performSearch();
+    });
+</script>
 	

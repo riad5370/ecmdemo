@@ -157,7 +157,6 @@
                                 <strong class="text-danger">{{ $message }}</strong>
                                 @enderror
                             </div>
-                           
                             <div class="col-12 col-lg">
                                 <input type="hidden" name="product_id" value="{{ $product_info->id }}">
                                 <!-- Submit -->
@@ -165,7 +164,7 @@
                                     <i class="lni lni-shopping-basket mr-2"></i>Add to Cart 
                                 </button>
                             </div>
-                        </form>
+                        </form>  
                       </div>
                       @if (session('error'))
                         <div class="alert alert-warning">{{session('error')}}</div>

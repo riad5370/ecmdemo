@@ -42,7 +42,7 @@
                             </a>
                         </div>
                         <div class="headd-sty-02 ml-3">
-                            <div class="bg-white rounded-md border-bold">
+                            <div class="bg-white search-bar rounded-md border-bold" style="width: 530px;">
                                 <div class="input-group">
                                     <input type="text" name="search_input" id="search_input" class="form-control custom-height b-0" value="{{ @$_GET['q'] }}" placeholder="Search for products..." />
                                     <div class="input-group-append">
@@ -50,7 +50,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                     <div class="headd-sty-last">
                         <ul class="nav-menu nav-menu-social align-to-right align-items-center d-flex">
@@ -75,7 +75,6 @@
                                     @endauth
                                 </div>
                             </li>
-                           
                             <li>
                                 <a href="#" onclick="openCart()">
                                     <div class="d-flex align-items-center justify-content-between">
@@ -88,13 +87,12 @@
                         </ul>	
                     </div>
                     <div class="mobile_nav">
-                        <ul>
-                            
-                        <li style="margin-left: 8px;">
-                            <a href="#" onclick="openCart()">
-                                <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>
-                            </a>
-                        </li>
+                        <ul>   
+                            <li style="margin-left: 8px;">
+                                <a href="#" onclick="openCart()">
+                                    <i class="lni lni-shopping-basket"></i><span class="dn-counter">0</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -102,7 +100,6 @@
         </div>
     </div>
 </div>
-
 @php
     $categories = App\Models\Category::all();
 @endphp
