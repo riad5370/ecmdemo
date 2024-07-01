@@ -69,7 +69,7 @@ class SearchController extends Controller
             if(!empty($data['min']) && $data['min'] != '' && $data['min'] != 'undefined' || !empty($data['max']) && $data['max'] != '' && $data['max'] != 'undefined'){
                 $q->whereBetween('after_discount', [$data['min'],$data['max']]);
             }
-        })->OrderBy($based_on, $order)->get();
+        })->OrderBy($based_on, $order)->paginate(4);
 
 
         $all_category = Category::all();

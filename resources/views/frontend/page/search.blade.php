@@ -240,7 +240,11 @@
                         </div>
                     @endforelse 
                 </div>
-                <!-- row -->
+                <div class="row">
+                    <div class="col-12">
+                        {{ $search_product->links() }}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SliderControler;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\BuyButtonCheckoutController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategorySubcategoryProductController;
@@ -79,6 +80,9 @@ Route::post('cart/update',[CartController::class,'cartUpdate'])->name('cart.upda
 Route::get('/checkout',[CheckoutController::class,'checkout'])->name('checkout');
 Route::post('/checkout/store',[CheckoutController::class,'store'])->name('checkout.store');
 Route::get('/order/success/{abc}',[CheckoutController::class,'orderSuccess'])->name('order.success');
+//buyNow-button-checkout
+Route::post('/checkout/main-button-checkout',[BuyButtonCheckoutController::class,'buyNow'])->name('buy.now');
+Route::Post('/buy-now-checkout-store',[BuyButtonCheckoutController::class,'buyNowCheckoutStore'])->name('buynowcheckout.store');
 
 //searching..................
 Route::get('/search',[SearchController::class,'search'])->name('search');

@@ -50,7 +50,24 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
+                        <style>
+                            @media (max-width: 991px) and (min-width: 768px) {
+                                .search-bar {
+                                    width: 430px !important;
+                                }
+                            }
+                            @media (max-width: 767px) and (min-width: 541px) {
+                                .search-bar {
+                                    width: 300px !important;
+                                }
+                            }
+                            @media (max-width: 540px) {
+                                .search-bar {
+                                    width: auto !important;
+                                }
+                            }
+                        </style> 
                     </div>
                     <div class="headd-sty-last">
                         <ul class="nav-menu nav-menu-social align-to-right align-items-center d-flex">
